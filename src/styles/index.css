@@ -1,0 +1,14 @@
+@import "~antd/dist/antd.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  display: grid;
+  grid-template-columns: 1.5fr 5fr;
+  grid-template-rows: 1.3fr 6fr;
+}
+
+header {
+  grid-column: 1/4;
+}
