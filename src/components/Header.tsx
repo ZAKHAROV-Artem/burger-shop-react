@@ -3,11 +3,12 @@ import Input from "../UI/input";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex mx-20 justify-between items-center">
+    <header className="flex mx-2 justify-between items-center">
       <div className="logo">
         <img
           src="https://www.freepnglogos.com/uploads/burger-king-png-logo/burger-king-png-logo-0.png"
           alt=""
+          className="w-23"
         />
       </div>
       <div className="flex items-center px-3 rounded-md bg-gray-200">

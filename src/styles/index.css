@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: rgb(249, 249, 249);
+}
 .App {
   display: grid;
   grid-template-columns: 1.5fr 5fr;
