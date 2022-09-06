@@ -12,7 +12,14 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="flex flex-col">
+    <aside className="md:flex md:flex-col">
+      <div className="logo">
+        <img
+          src="https://www.freepnglogos.com/uploads/burger-king-png-logo/burger-king-png-logo-0.png"
+          alt=""
+          className="w-23"
+        />
+      </div>
       {itemsList.map((item: IMenuItem) => (
         <MenuItem
           key={item.url}

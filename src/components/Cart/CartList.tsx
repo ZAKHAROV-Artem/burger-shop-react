@@ -7,14 +7,14 @@ const Cart: React.FC = () => {
   const { cartItems } = useTypedSelector((state) => state.cart);
 
   return (
-    <div className="overflow-y-scroll p-2">
+    <div className="h-screen overflow-y-scroll p-2">
       <h1 className="flex items-center text-2xl mb-5">
         Cart
         <div className="ml-3 text-sm px-3 py-2 rounded-md bg-yellow-400">
           {cartItems.length}
         </div>
       </h1>
-      <div className="" style={{ maxHeight: "90vh" }}>
+      <div className="" style={{ maxHeight: "95vh" }}>
         {cartItems ? (
           <div>
             {cartItems.map((item) => {

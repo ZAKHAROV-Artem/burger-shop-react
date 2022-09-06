@@ -19,8 +19,11 @@ export const CartItem: React.FC<CartItemProps> = ({
   const { removeCartItem, adjustCartItemCount } = useActions();
   return (
     <div
-      className="w-full rounded-md mt-3 flex bg-white"
-      style={{ boxShadow: "0 0 5px rgba(0,0,0,0.3)" }}
+      className="w-full rounded-md mt-3 flex flex-col md:grid bg-white"
+      style={{
+        boxShadow: "0 0 5px rgba(0,0,0,0.3)",
+        gridTemplateColumns: "2.5fr 5fr 0.8fr",
+      }}
     >
       <div className="flex items-center relative" id="hover_el">
         <TiDeleteOutline
@@ -40,7 +43,7 @@ export const CartItem: React.FC<CartItemProps> = ({
         <h2 className="text-xl sm:text-3xl font-bold">{name}</h2>
         <h3 className="text-md sm:text-lg max-w-xs mt-3">{description}</h3>
       </div>
-      <div className="flex items-center pr-7 ">
+      <div className="flex items-center p-3 md:p-0  md:pr-7 ">
         <button
           className="px-2 rounded-sm bg-yellow-400 text-2xl border-none h-fit"
           onClick={() => adjustCartItemCount(id, qty + 1)}
