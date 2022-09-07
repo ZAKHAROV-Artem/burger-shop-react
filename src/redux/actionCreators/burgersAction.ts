@@ -4,6 +4,7 @@ import axios from "axios";
 import { Dispatch } from "redux";
 import Item from "antd/lib/list/Item";
 
+//Api key is fake
 const options = {
   method: "GET",
   url: "https://burgers1.p.rapidapi.com/burgers",
