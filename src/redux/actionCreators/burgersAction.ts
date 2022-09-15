@@ -9,7 +9,7 @@ const options = {
   method: "GET",
   url: "https://burgers1.p.rapidapi.com/burgers",
   headers: {
-    "X-RapidAPI-Key": "f6991df5d3msheeba75a1f51cef1p15edb8jsnbda54856a588",
+    "X-RapidAPI-Key": "",
     "X-RapidAPI-Host": "burgers1.p.rapidapi.com",
   },
 };
