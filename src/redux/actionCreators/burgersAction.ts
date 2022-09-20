@@ -2,14 +2,14 @@ import { IBurgerItem } from "../../types/burgersTypes";
 import { BurgerAction, BurgerActionTypes } from "../../types/burgersTypes";
 import axios from "axios";
 import { Dispatch } from "redux";
-import Item from "antd/lib/list/Item";
+import { env } from "process";
 
 //Api key is fake
 const options = {
   method: "GET",
   url: "https://burgers1.p.rapidapi.com/burgers",
   headers: {
-    "X-RapidAPI-Key": "f6991df5d3msheeba75a1f51cef1p15edb8jsnbda54856a588",
+    "X-RapidAPI-Key": "",
     "X-RapidAPI-Host": "burgers1.p.rapidapi.com",
   },
 };

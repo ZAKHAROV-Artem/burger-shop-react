@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import BurgerDetail from "./components/Burgers/BurgerDetail";
 import Burgers from "./components/Burgers/BurgersList";
@@ -8,6 +8,7 @@ import Contacts from "./components/Contacts/Contacts";
 import Layout from "./components/Layout";
 import NotFoundPage from "./components/NotFoundPage";
 import { useActions } from "./hook/useActions";
+import { useNavigate } from "react-router-dom";
 
 const App: React.FC = () => {
   const { fetchBurgers } = useActions();
@@ -21,7 +22,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Burgers />} />
-          <Route path="/burger/:id" element={<BurgerDetail />} />
+          <Route path="burger/:id" element={<BurgerDetail />} />
           <Route path="cart" element={<Cart />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="*" element={<NotFoundPage />} />

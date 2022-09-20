@@ -1,3 +1,4 @@
+import { Empty } from "antd";
 import { useState } from "react";
 import { useSearchedBurgers } from "../../hook/useSearchedBurgers";
 import { useTypedSelector } from "../../hook/useTypedSelector";
@@ -17,7 +18,7 @@ const Burgers: React.FC = () => {
   };
   if (loading) {
     return (
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center">
         <Loader size={48} />
       </div>
     );
@@ -36,16 +37,18 @@ const Burgers: React.FC = () => {
       style={{ maxHeight: "95vh" }}
     >
       <h1 className="text-2xl mb-5">Burgers</h1>
+
       <div className="mb-3 flex items-center px-3 rounded-md bg-gray-200">
         <i className="fa fa-search icon text-gray-500"></i>
         <Input
           type="text"
           placeholder="Search"
-          className="bg-transparent outline-none py-2 px-3"
+          className="w-full bg-transparent outline-none py-2 px-3"
           value={search}
           onChange={onChange}
         />
       </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {searchedBurgers.map((burger: IBurgerItem) => {
           return <BurgerItem key={burger.id} burger={burger} />;

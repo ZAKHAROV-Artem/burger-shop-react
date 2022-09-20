@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+}
 body {
   background-color: rgb(249, 249, 249);
 }
@@ -14,4 +17,12 @@ body {
 
 header {
   grid-column: 1/4;
+}
+
+@media (max-width:767px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+
 }

@@ -5,9 +5,11 @@ import Sidebar from "./Sidebar";
 
 const Layout: React.FC = () => {
   return (
-    <div className="App w-screen h-screen px-2">
+    <div className="App w-screen h-screen px-2 md:overflow-y-hidden">
       <Sidebar />
-      <Outlet />
+      <div className="mt-10">
+        <Outlet />
+      </div>  
     </div>
   );
 };

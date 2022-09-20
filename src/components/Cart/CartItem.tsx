@@ -3,6 +3,7 @@ import { IBurgerItem } from "../../types/burgersTypes";
 import { TiDeleteOutline } from "react-icons/ti";
 import "../../styles/cartItem.css";
 import { useActions } from "../../hook/useActions";
+import { Link } from "react-router-dom";
 interface CartItemProps {
   id: number;
   name: string;
@@ -43,24 +44,32 @@ export const CartItem: React.FC<CartItemProps> = ({
         <h2 className="text-xl sm:text-3xl font-bold">{name}</h2>
         <h3 className="text-md sm:text-lg max-w-xs mt-3">{description}</h3>
       </div>
-      <div className="flex items-center p-3 md:p-0  md:pr-7 ">
-        <button
-          className="px-2 rounded-sm bg-yellow-400 text-2xl border-none h-fit"
-          onClick={() => adjustCartItemCount(id, qty + 1)}
+      <div className="flex flex-col justify-center p-3 md:p-0  md:pr-7 ">
+        <Link
+          to={`/burger/${id}`}
+          className="w-full text-center p-2 bg-yellow-400 rounded-md hover:text-white"
         >
-          +
-        </button>
-        <div className="px-3">{qty}</div>
-        <button
-          className="px-2 rounded-sm bg-yellow-400 text-2xl border-none h-fit"
-          onClick={() => {
-            if (qty) {
-              return adjustCartItemCount(id, qty - 1);
-            }
-          }}
-        >
-          -
-        </button>
+          See more
+        </Link>
+        <div className="flex items-center mt-3">
+          <button
+            className="px-2 rounded-sm bg-yellow-400 text-2xl border-none h-fit"
+            onClick={() => adjustCartItemCount(id, qty + 1)}
+          >
+            +
+          </button>
+          <div className="px-3">{qty}</div>
+          <button
+            className="px-2 rounded-sm bg-yellow-400 text-2xl border-none h-fit"
+            onClick={() => {
+              if (qty) {
+                return adjustCartItemCount(id, qty - 1);
+              }
+            }}
+          >
+            -
+          </button>
+        </div>
       </div>
     </div>
   );
